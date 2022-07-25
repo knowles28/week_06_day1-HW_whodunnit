@@ -1,0 +1,47 @@
+Episode #1: 
+verdict = Miss Scarlett
+reason =  nothing modifies the object or anonymous function after they've been declared
+
+
+Episode #2: 
+verdict = error
+reason =  attempted change of const variable 'murderer'
+
+Episode #3: 
+verdict1 = Mrs. Peacock
+verdict2 =  Professor Plum
+reason =  let Mrs. Peacock only exists inside the scope of declareMurderer,
+so even if 'Professor Plum' is a let variable, they're still the only murderer 
+with scope across the whole file.
+
+Episode #4: 
+suspects = Miss Scarlet, Professor Plum, Colonel Mustard
+suspect three = Mrs. Peacock
+reason =  Colonel Mustard replaces Mrs Peacock as suspectThree within 
+declareAllSuspects function, but not in the second console.log, because Mustard 
+only exists within the anonymous function.
+
+
+Episode #5: 
+verdict = Revolver
+reason = though the object scenario is const, we can still modify the attributes.
+
+Episode #6:
+verdict = Mrs White
+reason = even though changeMurderer is called before the console log, plotTwist is called within the scope of this function
+
+Episode #7: 
+verdict = Colonel Mustard
+reason =  unexpectedOutcome is called within the nested function, and as const is block-scoped, it doesn't apply to the 'layer up' i.e plotTwist
+❌ - Mr. Green. (Perhaps because Colonel Mustard is let? (False, without the let it becomes Miss Scarlet))
+Q - can we then reassign a variable as many times as we like within the scope of a const?
+
+Episode #8: 
+verdict = Mrs.Peacock
+reason = It's hard to articulate but I think I'm right?
+❌ - I clearly misread the question
+
+Episode #9: 
+verdict = Professor Plum
+reason =  Mrs. Peacock is a let and so only exists within the scope of the if?
+
